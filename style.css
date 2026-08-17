@@ -1,0 +1,132 @@
+:root {
+  --ink: #1c2230;
+  --ink-soft: #5b6473;
+  --line: #e6e9ef;
+  --accent: #2f6f5e;
+  --bg: #ffffff;
+  --card: #f7f8fa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e7eaf0;
+    --ink-soft: #9aa3b2;
+    --line: #2a3140;
+    --accent: #5cc4a7;
+    --bg: #14181f;
+    --card: #1b212a;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.brand { color: var(--accent); font-weight: 700; }
+
+.meta {
+  color: var(--ink-soft);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+h2 {
+  font-size: 19px;
+  margin: 36px 0 8px;
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0 0 14px; }
+
+.lead {
+  font-size: 18px;
+  color: var(--ink-soft);
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration: none; }
+
+ul { margin: 0 0 14px; padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+.callout {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 0 0 14px;
+}
+
+.callout p:last-child { margin-bottom: 0; }
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.nav a {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.nav a:hover { border-color: var(--accent); color: var(--accent); }
+
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 14px;
+  font-size: 15px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+th { color: var(--ink-soft); font-weight: 600; }
+
+.table-scroll { overflow-x: auto; }
